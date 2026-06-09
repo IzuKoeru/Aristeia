@@ -29,7 +29,7 @@ class _MenuPageState extends State<MenuPage>
   late final Animation<Offset> _contentOffset;
 
   final List<String> paginas = [
-    'Dashboard',
+    'Inicio',
     'Materias',
     'Análisis',
     'Retroalimentación',
@@ -445,7 +445,7 @@ class _MenuPageState extends State<MenuPage>
             child: ListView(
               padding: EdgeInsets.zero,
               children: [
-                botonMenuDrawer(Icons.dashboard, 'Dashboard', 0),
+                botonMenuDrawer(Icons.dashboard, 'Inicio', 0),
                 botonMenuDrawer(Icons.book, 'Materias', 1),
                 botonMenuDrawer(Icons.bar_chart, 'Análisis', 2),
                 botonMenuDrawer(Icons.chat, 'Retroalimentación', 3),

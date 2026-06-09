@@ -123,6 +123,11 @@ class _RetroalimentacionPageState
       );
     }
 
+    // Ajustes responsivos: calcular tamaño del título según ancho de pantalla
+    final screenWidth = MediaQuery.of(context).size.width;
+    // 8% del ancho de la pantalla, limitado entre 18 y 34 para legibilidad
+    final titleFontSize = (screenWidth * 0.08).clamp(18.0, 34.0);
+
     return Scaffold(
       backgroundColor: const Color(0xFF0A0A0A),
       body: Padding(
@@ -130,13 +135,15 @@ class _RetroalimentacionPageState
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
+            Text(
               'Retroalimentación',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 34,
+                fontSize: titleFontSize,
                 fontWeight: FontWeight.bold,
               ),
+              softWrap: true,
+              overflow: TextOverflow.visible,
             ),
             const SizedBox(height: 20),
             Container(
